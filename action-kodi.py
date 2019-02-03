@@ -1,16 +1,14 @@
 #!/usr/bin/env python2
 # coding: utf-8
 
-
 from hermes_python.hermes import Hermes
 from hermes_python.ontology import *
 
-
-MQTT_IP_ADDR = "localhost"
+HOST_ADDR = "localhost"
 MQTT_PORT = 1883
 MQTT_ADDR = "{}:{}".format(MQTT_IP_ADDR, str(MQTT_PORT))
 
-class Kodi(object):
+class KodiAssistant(object):
     def __init__(self):
         # start listening to MQTT
         self.start_blocking()
@@ -48,4 +46,4 @@ class Kodi(object):
             h.subscribe_intents(self.master_intent_callback).start()
 
 if __name__ == "__main__":
-    Kodi()
+    KodiAssistant()
