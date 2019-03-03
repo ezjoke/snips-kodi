@@ -34,10 +34,10 @@ class KodiAssistant(object):
     # --> Master callback function, triggered everytime an intent is recognized
     def master_intent_callback(self, hermes, intent_message):
         coming_intent = intent_message.intent.intent_name
-	    if coming_intent  == 'TurnOn':
+	    if coming_intent  == 'ezjoke:TurnOn':
             self.turn_on_callback(hermes, intent_message)
 
-	    elif coming_intent == 'TurnOff':
+	    elif coming_intent == 'ezjoke:TurnOff':
             self.turn_off_callback(hermes, intent_message)
 
     # --> Register callback function and start MQTT
