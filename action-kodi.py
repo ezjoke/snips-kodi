@@ -6,7 +6,7 @@ from hermes_python.ontology import *
 
 HOST_ADDR = "localhost"
 MQTT_PORT = 1883
-MQTT_ADDR = "{}:{}".format(MQTT_IP_ADDR, str(MQTT_PORT))
+MQTT_ADDR = "{}:{}".format(HOST_ADDR, str(MQTT_PORT))
 
 class KodiAssistant(object):
     def __init__(self):
